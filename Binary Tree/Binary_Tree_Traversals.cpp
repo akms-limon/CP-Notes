@@ -24,6 +24,7 @@ void preOrder(TreeNode *root) {
 }
 
 vector<int> preOrderIterator(TreeNode *root) {
+  if (root == nullptr) return {};
   stack<TreeNode*> st;
   vector<int> ans;
   st.push(root);
@@ -45,20 +46,18 @@ void inOrder(TreeNode *root) {
 }
 
 vector<int> inOrderIterator(TreeNode *root) {
+  if (root == nullptr) return {};
   stack<TreeNode*> st;
   vector<int> ans;
-  st.push(root);
-  while(!st.empty()) {
-    if (root != NULL) {
+  while(root != NULL || !st.empty()) {
+    while(root != NULL) {
       st.push(root);
       root = root->left;
     }
-    else {
-      if (st.empty()) break;
-      root = st.top();
-      ans.push_back(root->data);
-      root = root->right;
-    }
+    root = st.top();
+    st.pop();
+    ans.push_back(root->data);
+    root = root->right;
   }
   return ans;
 }
@@ -71,6 +70,7 @@ void postOrder(TreeNode *root) {
 }
 
 vector<int> postOrderUsingTwoStack(TreeNode *root) {
+  if (root == nullptr) return {};
   stack<TreeNode*> st1, st2;
   st1.push(root);
   while(!st1.empty()) {
@@ -89,6 +89,7 @@ vector<int> postOrderUsingTwoStack(TreeNode *root) {
 }
 
 void preInPostTraversal(TreeNode* root) {
+  if (root == nullptr) return;
   stack<pair<TreeNode*, int>> st;
   st.push({root, 1});
   vector<int> pre, in, post;
