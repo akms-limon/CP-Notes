@@ -102,38 +102,6 @@ This repository contains the topics and problems I have studied and practiced wh
   * Random
   * Mathematical / C++ Built-in Functions
 
-## Structure
-
-The repository is organized by topic:
-
-```text
-Competetive-Programming-Notes/
-│
-├── Algebra/
-├── Array/
-├── Binary Tree/
-├── Binary search/
-├── Bit Manipulation/
-├── C++ STL/
-├── Character/
-├── DP/
-├── Graph/
-├── Linked List/
-├── Other/
-├── Pointer/
-├── Precomputation/
-├── Recursion/
-├── Segment Tree/
-└── String/
-```
-
-Some topics also contain subfolders for specific problem sets. For example:
-
-```text
-DP/
-└── CSES Problem set/
-```
-
 ## Purpose
 
 The main purpose of this repository is to:
